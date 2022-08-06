@@ -22,10 +22,16 @@
               "src/favicon.ico",
               "src/assets"
             ],
+
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "Porfolio-FE/node_modules/bootstrap/dist/css/bootstrap.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              
+              "Porfolio-FE/node_modules/bootstrap/dist/js\bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
