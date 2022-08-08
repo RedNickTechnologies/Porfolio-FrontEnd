@@ -8,6 +8,9 @@ import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.c
 import { SocialComponent } from './components/social/social.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { SobreMiComponent } from './components/sobre-mi/sobre-mi.component';
     LogoArgProgComponent,
     SocialComponent,
     BannerComponent,
-    SobreMiComponent
+    SobreMiComponent,
+    ExperienciaComponent,
+    EducacionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
