@@ -25,12 +25,12 @@
 
             "styles": [
               "src/styles.css",
-              "Porfolio-FE/node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
 
             ],
             "scripts": [
               
-              "Porfolio-FE/node_modules/bootstrap/dist/js\bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
