@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SocialComponent } from './social.component';
+import { SobreMiComponent } from './sobre-mi.component';
 
-describe('SocialComponent', () => {
-  let component: SocialComponent;
-  let fixture: ComponentFixture<SocialComponent>;
+describe('SobreMiComponent', () => {
+  let component: SobreMiComponent;
+  let fixture: ComponentFixture<SobreMiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SocialComponent ]
+      declarations: [ SobreMiComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SocialComponent);
+    fixture = TestBed.createComponent(SobreMiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
