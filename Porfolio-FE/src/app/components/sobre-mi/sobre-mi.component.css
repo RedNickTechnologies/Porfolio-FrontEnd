@@ -1,11 +1,14 @@
 .row{
-    padding: 20px;
+    padding: 30px;
+    
 }
 
 div{
     background-color: white;
     text-align: center;
 }
+
+
 
 /* Modificador de estilo de la foto de perfil*/
 
@@ -16,7 +19,7 @@ div{
             width: 15%;
             border-radius: 100%;
             box-shadow: 3px 3px 3px grey;
-            left: 40%;
+            left: 3%;
             top: 550px;
         }
     }
@@ -34,5 +37,5 @@ div{
 
 #nombre{
     font-weight: bold;
-    margin-top: 30%;
+    margin-top: 40%;
 }

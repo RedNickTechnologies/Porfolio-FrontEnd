@@ -14,6 +14,7 @@ import { HardAndSoftSkillsComponent } from './components/hard-and-soft-skills/ha
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CertificadosComponent } from './components/certificados/certificados.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { CertificadosComponent } from './components/certificados/certificados.co
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgCircleProgressModule.forRoot({})
+
   ],
   providers: [],
   bootstrap: [AppComponent]
