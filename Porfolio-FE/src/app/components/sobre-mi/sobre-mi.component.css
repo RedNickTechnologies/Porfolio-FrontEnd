@@ -1,12 +1,15 @@
 .row{
-    padding: 30px;
+    padding: 50px;
     
 }
+
 
 div{
     background-color: white;
     text-align: center;
+    padding-left: 25px;
 }
+
 
 
 
@@ -19,8 +22,8 @@ div{
             width: 15%;
             border-radius: 100%;
             box-shadow: 3px 3px 3px grey;
-            left: 3%;
-            top: 550px;
+            left: 5%;
+            top: 490px;
         }
     }
     @media (max-width: 575px) {
@@ -31,7 +34,7 @@ div{
             border-radius: 100%;
             box-shadow: 3px 3px 3px grey;
             left: 20%;
-            top: 900px;
+            top: 510px;
         }
     }
 
