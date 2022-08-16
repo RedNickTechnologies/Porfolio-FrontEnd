@@ -9,3 +9,8 @@ div{
 h1, h3{
     display: inline;
 }
+
+img{
+    width: 100%;
+    height: 600px;
+}
