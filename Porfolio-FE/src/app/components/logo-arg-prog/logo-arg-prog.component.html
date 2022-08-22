@@ -10,7 +10,8 @@
             <a href="https://argentinaprograma.inti.gob.ar/"><img src="assets/twitter.png" id="twitter"></a>
             <a href="https://argentinaprograma.inti.gob.ar/"><img src="assets/instagram.png" id="instagram"></a>
             <a href="https://argentinaprograma.inti.gob.ar/"><img src="assets/github.png" id="github"></a>
-            <button type="button" class="btn btn-outline-light" (click)="login()">LOGIN</button>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESAR</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
             <button type="switch" id="switch">
                 <span><img src="assets/Sol.svg"></span>
                 <span> <img src="assets/Luna.svg" alt=""></span>
