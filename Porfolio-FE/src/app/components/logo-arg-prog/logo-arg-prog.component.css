@@ -1,19 +1,9 @@
 .row{
     background: #f11c1ce8;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 2px 2px 5px #999 ;
-}
-.switch{
-    background: #343D5b;
-    border-radius: 1000px;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    outline: none;
 }
 
 .container{
