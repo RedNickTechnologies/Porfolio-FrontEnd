@@ -14,8 +14,10 @@
                 <tr *ngFor= "let Experiencia of exp">
                     <td>{{Experiencia.nombre}}</td>
                     <td>{{Experiencia.puesto}} {{Experiencia.fecha}}</td>
-                    <td>EDITAR<td>
-                    <td>BORRAR</td>
+                    <td><button type="button" class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}"> </button>
+                        <i class="bi bi-pencil-fill"></i> EDITAR<td>
+
+                    <td><i class="bi bi-eraser-fill"></i> BORRAR</td>
                 </tr>
     
             </tbody>
