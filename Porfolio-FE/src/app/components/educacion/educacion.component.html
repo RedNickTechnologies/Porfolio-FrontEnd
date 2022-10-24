@@ -1,41 +1,30 @@
 <!-- Desde aca modifico mi componente educacion -->
 
 <div class="row">
-    <h1>Educación</h1>
+    <h1>Educacion</h1>
 
     <div class="col-lg-1"></div>
-
     <div class="col-lg-11">
-        <ul>
-            <li>
-                <h1>Estudio 1</h1> - <h3>años</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Incidunt maiores ducimus sunt deserunt voluptatem nostrum 
-                    minima optio repellendus dolore! In magni saepe voluptate tenetur
-                    modi porro deserunt et dolores nulla.
-                </p>
-            </li>
+        <button type="button" class="btn btn-dark" routerLink="/experiencias/crear" *ngIf="isLogged">
+            Agregar Educacion
+        </button>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>{{Educacion.nombreE}}</td>
+                    <td>{{Educacion.descripcionE}}</td>
+                    <td *ngIf="isLogged"> <button type="button" class="btn btn-light"
+                            routerLink="/editexp/{{Educacion.id}}"> <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    <td>
 
-            <li>
-                <h1>Estudio 2</h1> - <h3>años</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Incidunt maiores ducimus sunt deserunt voluptatem nostrum 
-                    minima optio repellendus dolore! In magni saepe voluptate tenetur
-                    modi porro deserunt et dolores nulla.
-                </p>
-            </li>
+                    <td><button type="button" class="btn btn-danger" (click)="borrar(Educacion.id)"> <i
+                                class="bi bi-eraser-fill"></i> BORRAR </button></td>
+                </tr>
 
-            <li>
-                <h1>Estudio 3</h1> - <h3>años</h3>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Incidunt maiores ducimus sunt deserunt voluptatem nostrum 
-                    minima optio repellendus dolore! In magni saepe voluptate tenetur
-                    modi porro deserunt et dolores nulla.
-                </p>
-            </li>
-        </ul>
+            </tbody>
+        </table>
     </div>
+
+
+
 </div>
