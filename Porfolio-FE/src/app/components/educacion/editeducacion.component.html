@@ -1,14 +1,14 @@
-<div class="conteiner">
+<div class="conteiner" *ngIf="educacion">
     <div class="row">
         <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for= "nombre">Nombre de la institucion</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombreE" required>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="educacion.nombreE" required>
                 </div>
                 <div class="form-group">
                     <label for= "puesto">Descripcion del titulo</label>
-                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="descripcionE" required>
+                    <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="educacion.descripcionE" required>
                 </div>
                 <button class="btn btn-primary">
                     Agregar Estudio
