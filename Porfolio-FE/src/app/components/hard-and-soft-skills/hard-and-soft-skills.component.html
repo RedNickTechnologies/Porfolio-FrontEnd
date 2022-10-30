@@ -2,119 +2,48 @@
     <!-- Desde aca se pueden modificar todos los circulos de Hard and Soft Skills -->
 
     <h1>Hard and Soft Skills</h1>
-    <!-- "CIRCULO HTML" -->
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../assets/html5.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#f11c1ce8'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="600"
-        ></circle-progress>
+
+    <div class= "col-lg-2">
+        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
     </div>
-    <!-- "CIRCULO JAVASCRIPT" -->
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../assets/JavaScript.png'"
+
+
+    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+        <circle-progress 
+        [percent]="(skill.porcentaje)" 
+        [radius]="100" [imageSrc]="'../assets/html5.png'"
+        [title]="(skill.nombre)"
+        [titleColor]="'#212F3C'"
+        [showTitle]="true"
         [showImage]="true"
         [imageHeight]="70"
-        [imageWidth]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
+        [imageWidth]="70" 
+        [showUnits]="false" 
+        [showSubtitle]="false" 
+        [outerStrokeWidth]="16" 
         [innerStrokeWidth]="2"
         [outerStrokeColor]="'#f11c1ce8'"
         [innerStrokeColor]="'black'"
         [animation]="true"
-        [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <!-- "CIRCULO CSS" -->
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../assets/Css.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#f11c1ce8'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <!-- "CIRCULO JAVA" -->
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../assets/JavaLogo.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#f11c1ce8'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <!-- "CIRCULO TEAMWORK" -->
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../assets/trabajo-en-equipo.webp'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#f11c1ce8'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="600"
-        ></circle-progress>
-    </div>
-    <!-- "CIRCULO NIVEL INGLES" -->
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../assets/ingles.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="2"
-        [outerStrokeColor]="'#f11c1ce8'"
-        [innerStrokeColor]="'black'"
-        [animation]="true"
-        [animationDuration]="600"
-        ></circle-progress>
+        [animationDuration]="600">
+
+        </circle-progress>
+
+        <div>
+
+            <td *ngIf="isLogged"> <button type="button" class="btn btn-light" routerLink="/edithys/{{skill.id}}"> <i
+                class="bi bi-pencil-fill"></i></button>
+            <td>
+
+            <td *ngIf="isLogged"><button type="button" class="btn btn-danger" (click)="delete(skill.id)"> <i
+                       class="bi bi-eraser-fill"></i></button>
+            </td>
+
+
+        </div>
+
+        
+
     </div>
 
 </div>
