@@ -2,13 +2,13 @@ export class Educacion {
 
     id?: number;
     establecimiento: string;
-    descripcionE: string;
-    fechaE: string;
+    logro: string;
+    fecha: string;
 
-    constructor(establecimiento: string, descripcionE: string, fechaE: string){
+    constructor(establecimiento: string, logro: string, fecha: string){
         this.establecimiento=establecimiento;
-        this.descripcionE=descripcionE;
-        this.fechaE=fechaE;
+        this.logro=logro;
+        this.fecha=fecha;
     }
 
 }
