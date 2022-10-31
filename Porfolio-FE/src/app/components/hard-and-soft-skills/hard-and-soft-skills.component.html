@@ -10,8 +10,9 @@
 
     <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
         <circle-progress 
-        [percent]="(skill.porcentaje)" 
-        [radius]="100" [imageSrc]="'../assets/html5.png'"
+        [percent]="(skill.progress)" 
+        [radius]="100"
+        [imageSrc]="(skill.img)"
         [title]="(skill.nombre)"
         [titleColor]="'#212F3C'"
         [showTitle]="true"
@@ -31,7 +32,7 @@
 
         <div>
 
-            <td *ngIf="isLogged"> <button type="button" class="btn btn-light" routerLink="/edithys/{{skill.id}}"> <i
+            <td *ngIf="isLogged"> <button type="button" class="btn btn-light" routerLink="/editskill/{{skill.id}}"> <i
                 class="bi bi-pencil-fill"></i></button>
             <td>
 
