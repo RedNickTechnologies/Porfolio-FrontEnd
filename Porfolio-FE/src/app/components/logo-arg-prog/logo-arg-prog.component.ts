@@ -10,6 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class LogoArgProgComponent implements OnInit {
 
   isLogged = false;
+  nombre: string;
 
   constructor(private router: Router, private tokenService: TokenService) { }
 
@@ -17,6 +18,7 @@ export class LogoArgProgComponent implements OnInit {
 
     if(this.tokenService.getToken()){
       this.isLogged=true;
+      this.nombre= this.tokenService.getUserName();
     }else{
       this.isLogged=false;
     }

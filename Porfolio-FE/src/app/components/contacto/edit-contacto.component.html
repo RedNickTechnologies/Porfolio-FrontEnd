@@ -1,0 +1,24 @@
+<div class="conteiner" *ngIf="contacto">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for= "nombre">Nombre del contacto</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="contacto.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for= "logro">Descripcion del titulo</label>
+                    <input type="text" class="form-control" id="email" name="email" [(ngModel)]="contacto.email" required>
+                </div>
+                <div class="form-group">
+                    <label for= "mensaje">Egreso</label>
+                    <input type="text" class="form-control" id="mensaje" name="mensaje" [(ngModel)]="contacto.mensaje" required>
+                </div>
+                <button class="btn btn-primary">
+                    Agregar Estudio
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>

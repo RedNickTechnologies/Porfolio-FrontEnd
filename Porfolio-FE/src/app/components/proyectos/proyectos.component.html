@@ -13,6 +13,8 @@
                 <tr *ngFor="let Proyecto of pro">
                     <td>{{Proyecto.nombre}}</td>
                     <td>{{Proyecto.desempenio}}</td>
+                    <td><a href={{Proyecto.url}}><img width="80px" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" /></a> </td>
+                    <td></td>
                     <td *ngIf="isLogged"> <button type="button" class="btn btn-light"
                             routerLink="editproyecto/{{Proyecto.id}}"> <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     <td>

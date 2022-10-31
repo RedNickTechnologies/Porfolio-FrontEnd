@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { JwtDto } from '../model/jwt-dto';
+import { RolesAccount } from '../model/roles';
 
 const TOKEN_KEY = 'AuthToken';
 const USERNAME_KEY ='AuthUsername';
@@ -10,9 +12,28 @@ const AUTHORITIES_KEY= 'AuthAuthorities';
 
 export class TokenService {
 
-  roles: Array<string> = [];
 
   constructor() { }
+
+  public setData(data: JwtDto){
+    this.setToken(data.token);
+    this.setUserName(data.nombreUsuario);
+    this.setAuthorities(data.authorities);
+  }
+
+  public isLogged(): boolean{
+    if(this.getToken()){
+      return true;
+    }
+    return false;
+
+  }
+
+
+  public isAdmin(): boolean{
+    let roles = this.getAuthorities();
+    return roles.indexOf(RolesAccount.ADMIN)!= -1;
+  }
 
   public setToken(token: string): void {
     window.sessionStorage.removeItem(TOKEN_KEY);
@@ -28,23 +49,24 @@ export class TokenService {
     window.sessionStorage.setItem(USERNAME_KEY, userName);
   }
 
-  public getUserName(userName: string){
+  public getUserName(){
     return sessionStorage.getItem(USERNAME_KEY)!;
   }
 
-  public serAuthorities(authorities: string[]): void{
+  public setAuthorities(authorities: string[]): void{
     window.sessionStorage.removeItem(AUTHORITIES_KEY);
     window.sessionStorage.setItem(AUTHORITIES_KEY, JSON.stringify(authorities));
   }
 
   public getAuthorities(): string[]{
-    this.roles = [];
+    let roles: string[]=[];
+
     if(sessionStorage.getItem(AUTHORITIES_KEY)){
       JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((authority:any) =>{
-        this.roles.push(authority.authority);
+        roles.push(authority.authority);
       });
     }
-    return this.roles;
+    return roles;
   }
 
   public logOut(): void{
