@@ -1,0 +1,30 @@
+<div class="row">
+    <h1>Contacto</h1>
+
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        <button type="button" class="btn btn-dark" routerLink="newcontacto" *ngIf="isAdmin">
+            Agregar Contacto
+        </button>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Contacto of contacto">
+                    <td>{{Contacto.nombre}}</td>
+                    <td>{{Contacto.email}}</td>
+                    <td>{{Contacto.mensaje}}</td>
+                    <td *ngIf="isAdmin"> <button type="button" class="btn btn-light"
+                            routerLink="editcontacto/{{Contacto.id}}"> <i class="bi bi-pencil-fill"></i>
+                            EDITAR</button>
+                    <td>
+
+                    <td><button type="button" class="btn btn-danger" *ngIf="isAdmin" (click)="borrar(Contacto.id)"> <i
+                                class="bi bi-eraser-fill"></i> BORRAR </button></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>

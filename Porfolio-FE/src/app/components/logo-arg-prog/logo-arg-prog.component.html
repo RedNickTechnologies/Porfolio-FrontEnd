@@ -1,20 +1,19 @@
 <div class="row">
     <div class="container">
         <div class="logo">
-            <img src="../../../assets/APLogo.png" id="logoAP">
+            <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="../../../assets/APLogo.png" id="logoAP"></a>
         </div>
 
+        <div class="user" *ngIf="isLogged"><span>Hola {{nombre}}</span> </div>
+
         <div class="redes">
-            <a href=""><img src="assets/linkedin.png" id="linkedin"></a>
-            <a href=""><img src="assets/facebook.png" id="facebook"></a>
-            <a href=""><img src="assets/twitter.png" id="twitter"></a>
-            <a href=""><img src="assets/instagram.png" id="instagram"></a>
-            <a href=""><img src="assets/github.png" id="github"></a>
-            <button type="button" class="btn btn-outline-light">LOGIN</button>
-            <button type="switch" id="switch">
-                <span><img src="assets/Sol.svg"></span>
-                <span> <img src="assets/Luna.svg" alt=""></span>
-            </button>
+            <a href="https://www.linkedin.com/in/acevedogn/" target="_blank"><img src="assets/linkedin.png" id="linkedin"></a>
+            <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="assets/facebook.png" id="facebook"></a>
+            <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="assets/twitter.png" id="twitter"></a>
+            <a href="https://argentinaprograma.inti.gob.ar/" target="_blank"><img src="assets/instagram.png" id="instagram"></a>
+            <a href="https://github.com/RedNickTechnologies" target="_blank"><img src="assets/github.png" id="github"></a>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESAR</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
         
         </div>
     </div>

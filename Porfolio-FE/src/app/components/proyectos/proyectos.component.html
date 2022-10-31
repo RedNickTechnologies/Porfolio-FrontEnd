@@ -4,14 +4,26 @@
 <div class="row">
     <h1> Proyectos realizados</h1>
     <div class="contenedor"></div>
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h2>Sistema de empresas</h2>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Illo consequatur expedita tempore iusto commodi ad necessitatibus placeat
-                rerum harum incidunt pariatur, mollitia error a accusantium. Facilis modi reiciendis cumque molestiae.</p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 parte2">
-            <a href=""><img src="assets/JavaLogo.png" class="img-fluid img-proyecto"/></a>
-        </div>
+    <div class="col-lg-11">
+        <button type="button" class="btn btn-dark" routerLink="newProyectos" *ngIf="isAdmin">
+            Nuevo Proyecto
+        </button>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyecto of pro">
+                    <td>{{Proyecto.nombre}}</td>
+                    <td>{{Proyecto.desempenio}}</td>
+                    <td><a href={{Proyecto.url}}><img width="80px" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" /></a> </td>
+                    <td></td>
+                    <td *ngIf="isAdmin"> <button type="button" class="btn btn-light"
+                            routerLink="editproyecto/{{Proyecto.id}}"> <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    <td>
 
+                    <td *ngIf="isAdmin"><button type="button" class="btn btn-danger" (click)="delete(Proyecto.id)"> <i
+                                class="bi bi-eraser-fill"></i> BORRAR </button></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
 </div>
