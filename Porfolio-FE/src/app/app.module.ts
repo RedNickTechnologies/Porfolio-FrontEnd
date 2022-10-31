@@ -14,7 +14,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardAndSoftSkillsComponent } from './components/hard-and-soft-skills/hard-and-soft-skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { CertificadosComponent } from './components/certificados/certificados.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component'
@@ -40,7 +39,6 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
     HardAndSoftSkillsComponent,
     ProyectosComponent,
     FooterComponent,
-    CertificadosComponent,
     HomeComponent,
     LoginComponent,
     NewExperienciaComponent,
