@@ -18,7 +18,7 @@ export class SProyectoServiceService {
   }
 
   public detail (id: number) : Observable<Proyecto>{
-    return this.httpClient.get<Proyecto>(this.proURL + `${id}`);
+    return this.httpClient.get<Proyecto>(this.proURL + id);
   }
 
   public save(Proyecto: Proyecto): Observable<any>{

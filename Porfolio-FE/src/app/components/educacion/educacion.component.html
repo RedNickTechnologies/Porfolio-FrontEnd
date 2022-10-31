@@ -19,7 +19,7 @@
                             EDITAR</button>
                     <td>
 
-                    <td><button type="button" class="btn btn-danger" (click)="borrar(Educacion.id)"> <i
+                    <td><button type="button" class="btn btn-danger" *ngIf="isLogged" (click)="borrar(Educacion.id)"> <i
                                 class="bi bi-eraser-fill"></i> BORRAR </button></td>
                 </tr>
 

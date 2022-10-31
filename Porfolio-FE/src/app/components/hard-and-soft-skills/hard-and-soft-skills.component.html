@@ -13,8 +13,8 @@
         [percent]="(skill.progress)" 
         [radius]="100"
         [imageSrc]="(skill.img)"
-        [title]="(skill.nombre)"
-        [titleColor]="'#212F3C'"
+        [title]="skill.nombre"
+        [titleColor]="'Black'"
         [showTitle]="true"
         [showImage]="true"
         [imageHeight]="70"
@@ -29,6 +29,8 @@
         [animationDuration]="600">
 
         </circle-progress>
+
+        {{skill.nombre}}
 
         <div>
 
