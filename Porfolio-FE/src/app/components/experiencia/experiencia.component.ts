@@ -14,16 +14,10 @@ export class ExperienciaComponent implements OnInit {
 
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
 
-  isLogged= false;
+  isAdmin= this.tokenService.isAdmin();
 
   ngOnInit(): void {
     this.cargarExperiencia();
-    if(this.tokenService.getToken()){
-      this.isLogged=true;
-    } else {
-      this.isLogged = false;
-    }
-
   }
 
   cargarExperiencia():void{

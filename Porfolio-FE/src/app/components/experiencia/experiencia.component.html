@@ -5,7 +5,7 @@
 
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <button type="button" class="btn btn-dark" routerLink="nuevaExp" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="nuevaExp" *ngIf="isAdmin">
             Nueva Experiencia
         </button>
         <table class="table">
@@ -13,11 +13,11 @@
                 <tr *ngFor="let Experiencia of exp">
                     <td>{{Experiencia.nombre}}</td>
                     <td>{{Experiencia.puesto}} {{Experiencia.fecha}}</td>
-                    <td *ngIf="isLogged"> <button type="button" class="btn btn-light"
+                    <td *ngIf="isAdmin"> <button type="button" class="btn btn-light"
                             routerLink="editexp/{{Experiencia.id}}"> <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     </td>
 
-                    <td *ngIf="isLogged"><button type="button" class="btn btn-danger" (click)="delete(Experiencia.id)"> <i
+                    <td *ngIf="isAdmin"><button type="button" class="btn btn-danger" (click)="delete(Experiencia.id)"> <i
                                 class="bi bi-eraser-fill"></i> BORRAR </button></td>
                 </tr>
 

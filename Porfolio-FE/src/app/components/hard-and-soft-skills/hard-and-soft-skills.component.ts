@@ -12,15 +12,11 @@ export class HardAndSoftSkillsComponent implements OnInit {
   skill: Skill[] =[];
 
   constructor(private skillS: SkillService, private tokenService: TokenService) { }
-  isLogged= false;
+  
+  isAdmin= this.tokenService.isAdmin();
 
   ngOnInit(): void {
     this.cargarSkills();
-    if(this.tokenService.getToken()){
-      this.isLogged = true;
-    } else {
-      this.isLogged=false;
-    }
   }
 
   cargarSkills(): void{

@@ -5,7 +5,7 @@
     <h1> Proyectos realizados</h1>
     <div class="contenedor"></div>
     <div class="col-lg-11">
-        <button type="button" class="btn btn-dark" routerLink="newProyectos" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="newProyectos" *ngIf="isAdmin">
             Nuevo Proyecto
         </button>
         <table class="table">
@@ -15,11 +15,11 @@
                     <td>{{Proyecto.desempenio}}</td>
                     <td><a href={{Proyecto.url}}><img width="80px" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" /></a> </td>
                     <td></td>
-                    <td *ngIf="isLogged"> <button type="button" class="btn btn-light"
+                    <td *ngIf="isAdmin"> <button type="button" class="btn btn-light"
                             routerLink="editproyecto/{{Proyecto.id}}"> <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     <td>
 
-                    <td *ngIf="isLogged"><button type="button" class="btn btn-danger" (click)="delete(Proyecto.id)"> <i
+                    <td *ngIf="isAdmin"><button type="button" class="btn btn-danger" (click)="delete(Proyecto.id)"> <i
                                 class="bi bi-eraser-fill"></i> BORRAR </button></td>
                 </tr>
 
